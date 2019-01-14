@@ -1,0 +1,19 @@
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  age: Int
+}
+
+type Query {
+  users: [User!]!
+  user(id: ID!): User!
+}
+
+type Mutation {
+  createUser(id: ID!, name: String!, email: String!, age: Int): User!
+  updateUser(id: ID!, name: String, email: String, age: Int): User!
+  deleteUser(id: ID!): User!
+}
+
+# https://medium.freecodecamp.org/a-beginners-guide-to-graphql-86f849ce1bec
